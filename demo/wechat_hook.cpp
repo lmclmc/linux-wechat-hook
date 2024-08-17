@@ -67,7 +67,7 @@ void __attribute__((constructor)) wechat_hook_init(void) {
             
         }
         
-        //memcpy((unsigned char *)second_nop_cmd_addr, (unsigned char *)wechat_baseaddr + WECHAT_OFFSET, 12);
+        memcpy((unsigned char *)second_nop_cmd_addr, (unsigned char *)wechat_baseaddr + WECHAT_OFFSET, 12);
 
         unsigned char movabs_wechat_buffer[10];
         memset(movabs_wechat_buffer, 0, sizeof(movabs_wechat_buffer));
